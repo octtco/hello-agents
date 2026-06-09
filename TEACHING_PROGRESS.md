@@ -103,6 +103,7 @@
 - 有效方式：第 4 课开始前先查官方最新文档，再说明 Responses API、JSON mode、Structured Outputs 的区别，符合 lelele 对“不要用过时接口”的要求。
 - 需要避免：不能连续多节课以“先初步接触”为由跳过关键底层。每当引入新语法、新标准、新 SDK 对象时，必须先回答三件事：它是什么、长什么样、怎么观察。
 - 新观察：lelele 对“跑通但黑箱”非常敏感，能发现教学链路里未讲清的概念依赖。后续应在每节课开头列出“本课会用到的新语法/新对象/新标准”，并先补最小理解。
+- 需要避免：重复讲已经讲过的语法或概念时，不说明是“刻意复习”还是“忘了之前讲过”。后续重复内容前必须先标注【新知识】、【复习】或【加深】，并说明为什么再次出现。
 
 ## 对 lelele 的学习画像更新
 
@@ -115,6 +116,7 @@
 - 教学节奏：代码实操应采用“先一行/一小段、解释效果、再组合”的方式；不要默认函数、参数、判断、循环已经理解。
 - 资料偏好：lelele 希望课程内容贴近最新实践，尤其是 OpenAI API 这类变化快的内容；过时接口可以讲历史背景，但不能当主线。
 - 学习风险：如果课程只推进功能而不打开底层结构，lelele 会形成“代码能跑但概念不稳”的不适感。后续需要更明确地区分“今天只预览”与“今天要掌握”，预览内容不能连续积压。
+- 教学透明度：lelele 需要知道重复讲某个知识点是因为课程设计中的复习/加深，还是因为上下文没有正确继承。后续每次开课前应回看 `TEACHING_PROGRESS.md` 和必要时 `COURSE_OUTLINE.md`，重复讲时主动说明依据。
 
 ## 大纲调整记录
 
@@ -133,6 +135,14 @@
   - 调整原因：第 4-5 课推进过快，Python 语法、JSON Schema、OpenAI SDK 返回结构存在未讲清的黑箱。
   - 调整内容：在 ReAct 前补一课，系统讲 `append/extend/+=`、dict/list 与 JSON 类型对应、JSON Schema 通用概念、OpenAI `response.output/output_text` 的真实结构。
   - 调整后下一步：先与 lelele 讨论以后如何避免跳步，再开始第 5.5 课。
+- 2026-06-09：课程大纲从 `AGENTS.md` 迁移到 `COURSE_OUTLINE.md`。
+  - 调整原因：`AGENTS.md` 同时承载协作规则和课程路线，职责过重。
+  - 调整内容：`AGENTS.md` 保留教学协作规则和学习者画像；`COURSE_OUTLINE.md` 保存学习目标、项目学习取舍和完整课程大纲。
+  - 调整后下一步：后续查教学规则看 `AGENTS.md`，查课程路线看 `COURSE_OUTLINE.md`，查动态进度看 `TEACHING_PROGRESS.md`。
+- 2026-06-09：第 5.5 课已补 `append/extend/+=`、JSON/JSON Schema，并开始观察 OpenAI SDK 返回结构。
+  - 已新增 `lessons/lesson_05/inspect_response.py`，专门打印 `response`、`response.output`、`response.output_text` 和 `response.output[0]` 的类型与字段。
+  - 观察结果：第一次 tools 调用返回的 `response` 类型是 `openai.types.responses.response.Response`；`response.output` 是 list；其中第一项类型是 `ResponseFunctionToolCall`，字段包括 `type=function_call`、`name=add`、`arguments='{"a":23,"b":19}'`、`call_id=...`。
+  - 关键理解：第一次工具调用时 `response.output_text` 为空，因为模型没有生成最终文本，而是生成了工具调用请求；最终给用户看的文本来自回传工具结果后的第二次响应。
 
 ## 下次教学入口
 
