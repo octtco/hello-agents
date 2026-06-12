@@ -6,9 +6,9 @@
 
 ## 当前课程进度
 
-- 当前阶段：第 5 课后暂停进入 ReAct，先补第 5.5 课地基。
-- 当前课程：第 5.5 课，补齐 Python / JSON Schema / OpenAI SDK 返回结构。
-- 下一步：与 lelele 讨论后续如何避免“跑通主线但底层黑箱过多”的问题，再开始补课。
+- 当前阶段：第 7 课进行中，最小 Plan-and-Solve 主流程已跑通。
+- 当前课程：第 7 课，Plan-and-Solve。
+- 下一步：总结第 7 课，补充计划步数限制、执行成本和上下文膨胀问题。
 
 ## 已完成课程
 
@@ -143,13 +143,31 @@
   - 已新增 `lessons/lesson_05/inspect_response.py`，专门打印 `response`、`response.output`、`response.output_text` 和 `response.output[0]` 的类型与字段。
   - 观察结果：第一次 tools 调用返回的 `response` 类型是 `openai.types.responses.response.Response`；`response.output` 是 list；其中第一项类型是 `ResponseFunctionToolCall`，字段包括 `type=function_call`、`name=add`、`arguments='{"a":23,"b":19}'`、`call_id=...`。
   - 关键理解：第一次工具调用时 `response.output_text` 为空，因为模型没有生成最终文本，而是生成了工具调用请求；最终给用户看的文本来自回传工具结果后的第二次响应。
+  - 第 5.5 课已完成：已总结 `append/extend/+=`、JSON/JSON Schema、OpenAI `response/output/output_text`、工具调用第一次响应与最终响应的区别。
+- 2026-06-10：第 6 课 ReAct 核心已开始。
+  - 已按新机制标注本课知识状态：复习工具调用、while、if/elif、json.loads、tools 字典；加深 Observation 和 messages/history；新知识为 ReAct 的 Reason + Act 循环。
+  - 已讲解 Thought / Action / Observation / Finish 的直觉关系。
+  - 已创建空文件 `lessons/lesson_06/react_agent.py`，由 lelele 自己写内容。
+  - lelele 已完成并跑通最小 ReAct：模型输出 `thought/action/arguments/finish`，Python 执行 `action`，把 `Observation` 放回 `messages`，循环直到 `finish`。
+  - 已加入调试打印：User、LLM Reply、Action、Observation、Messages，帮助观察完整 ReAct 过程。
+  - 已处理基础边界：最多循环 5 次，未知工具返回错误提示；prompt 中约束 finish 为空时必须有 action，action 为空时必须有 finish。
+  - 已完成第 6 课收尾：讲解最大循环次数、未知工具处理、Observation 应写清楚、调试打印后续可升级为 debug/log，以及手搓 ReAct 与官方 tools 循环的关系。
+- 2026-06-11：第 7 课 Plan-and-Solve 已开始。
+  - 已按新机制标注本课知识状态：复习 list、for 循环、messages/history；加深状态记录；新知识为 Plan-and-Solve；预览 planner/executor 后续拆分。
+  - 已讲解 ReAct 与 Plan-and-Solve 的区别：ReAct 是边想边做，Plan-and-Solve 是先规划再执行。
+  - 已创建空文件 `lessons/lesson_07/plan_and_solve.py`，由 lelele 自己写内容。
+  - lelele 已完成最小 Plan-and-Solve 主流程：`distinguish -> plan -> execute -> summarize`，并把意图判断拆到 `distinguish` 字段，避免污染 `finish`。
+  - 已加入调试打印，能观察 Distinguish、Plan、Execute、Summary 各阶段的 prompt、raw reply、steps、results 和 final answer。
+  - 已验证 daily 路径可正常回复；复杂问题可进入 plan 路径、生成 steps 并逐步执行。
+  - 新边界：planner 可能生成过多步骤，例如 `怎么做一个agent` 生成 14 步，导致执行耗时、上下文变长、token 成本膨胀。后续应限制步骤数量，例如 prompt 要求 3-5 步，或 schema 给 `steps` 加 `minItems/maxItems`。
+  - lelele 指出不能简单用 `steps[:5]` 粗暴截断，因为后续步骤可能很重要。更合理的策略是：如果步骤过多，让模型压缩/合并成 3-5 个高层步骤，并要求不要丢失重要信息。Python 截断只能作为最后兜底，不适合作为常规策略。
 
 ## 下次教学入口
 
-第 5.5 课：补地基。
+第 7 课：Plan-and-Solve。
 
 建议开场：
 
-- 本课目标：把第 4-5 课里的黑箱打开。
-- 为什么学：跑通工具调用还不够，需要理解 Python 容器操作、JSON Schema 和 OpenAI SDK 返回对象。
-- 学完能做什么：能解释 `append/extend/+=`、JSON Schema 是什么、`response.output` 和 `output_text` 的区别，并能通过 `print/type` 自己观察 SDK 返回结构。
+- 本课目标：让 Agent 先拆计划，再按步骤执行。
+- 为什么学：ReAct 是边想边做，Plan-and-Solve 是先整体拆解，再逐步完成，适合更长任务。
+- 学完能做什么：写一个先生成计划、再逐步执行并汇总结果的 Agent。
