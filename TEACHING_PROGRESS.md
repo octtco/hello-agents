@@ -6,9 +6,9 @@
 
 ## 当前课程进度
 
-- 当前阶段：第 7 课进行中，最小 Plan-and-Solve 主流程已跑通。
-- 当前课程：第 7 课，Plan-and-Solve。
-- 下一步：总结第 7 课，补充计划步数限制、执行成本和上下文膨胀问题。
+- 当前阶段：第 8 课进行中，已开始 Reflection 自我修正。
+- 当前课程：第 8 课，Reflection 自我修正。
+- 下一步：等待 lelele 自己完成 `lessons/lesson_08/reflection_agent.py` 的最小版本：回答、检查、必要时修正。
 
 ## 已完成课程
 
@@ -161,13 +161,18 @@
   - 已验证 daily 路径可正常回复；复杂问题可进入 plan 路径、生成 steps 并逐步执行。
   - 新边界：planner 可能生成过多步骤，例如 `怎么做一个agent` 生成 14 步，导致执行耗时、上下文变长、token 成本膨胀。后续应限制步骤数量，例如 prompt 要求 3-5 步，或 schema 给 `steps` 加 `minItems/maxItems`。
   - lelele 指出不能简单用 `steps[:5]` 粗暴截断，因为后续步骤可能很重要。更合理的策略是：如果步骤过多，让模型压缩/合并成 3-5 个高层步骤，并要求不要丢失重要信息。Python 截断只能作为最后兜底，不适合作为常规策略。
+  - 第 7 课已完成：Plan-and-Solve 的核心链路、调试观察和主要边界已讲完。
+- 2026-06-15：第 8 课 Reflection 自我修正已开始。
+  - 已按新机制标注本课知识状态：复习 `call_llm`、messages/history、json.loads/Structured Outputs；加深错误处理和重试；新知识为 Reflection；预览未来 Evaluator。
+  - 已讲解 Reflection 的最小流程：先生成 draft，再检查 passed/feedback/score，不合格则 revise。
+  - 已创建空文件 `lessons/lesson_08/reflection_agent.py`，由 lelele 自己写内容。
 
 ## 下次教学入口
 
-第 7 课：Plan-and-Solve。
+第 8 课：Reflection 自我修正。
 
 建议开场：
 
-- 本课目标：让 Agent 先拆计划，再按步骤执行。
-- 为什么学：ReAct 是边想边做，Plan-and-Solve 是先整体拆解，再逐步完成，适合更长任务。
-- 学完能做什么：写一个先生成计划、再逐步执行并汇总结果的 Agent。
+- 本课目标：让 Agent 回答后检查自己，并在不合格时修正。
+- 为什么学：模型第一次回答不一定可靠，Reflection 能让 Agent 多一层自检和重试。
+- 学完能做什么：写一个回答后自检，不合格就重答的 Agent。
