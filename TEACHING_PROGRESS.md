@@ -6,9 +6,9 @@
 
 ## 当前课程进度
 
-- 当前阶段：第 8 课进行中，已开始 Reflection 自我修正。
-- 当前课程：第 8 课，Reflection 自我修正。
-- 下一步：等待 lelele 自己完成 `lessons/lesson_08/reflection_agent.py` 的最小版本：回答、检查、必要时修正。
+- 当前阶段：第 9 课准备开始，进入记忆系统。
+- 当前课程：第 9 课，记忆系统。
+- 下一步：讲解 Agent 的工作记忆和长期记忆，并手写 JSON 记忆库，支持 add / search / list。
 
 ## 已完成课程
 
@@ -166,13 +166,20 @@
   - 已按新机制标注本课知识状态：复习 `call_llm`、messages/history、json.loads/Structured Outputs；加深错误处理和重试；新知识为 Reflection；预览未来 Evaluator。
   - 已讲解 Reflection 的最小流程：先生成 draft，再检查 passed/feedback/score，不合格则 revise。
   - 已创建空文件 `lessons/lesson_08/reflection_agent.py`，由 lelele 自己写内容。
+- 2026-06-20：第 8 课 Reflection 自我修正已完成。
+  - lelele 已完成并跑通 `lessons/lesson_08/reflection_agent.py` 的最小 Reflection 闭环：生成初稿 `draft`、检查 `check.pass/check.feedback/check.score`、必要时 `revise` 修正、最终返回答案。
+  - 已加入关键调试打印：User、Draft Start、Call LLM、LLM Raw Reply、Check Prompt、Check Result、Python Hard Pass、Revise Start、Final Answer，方便观察程序卡在哪一步。
+  - 已调试运行问题：遇到 SOCKS proxy 缺少 `socksio` 依赖，判断为环境依赖问题，不是 Reflection 逻辑错误。
+  - 已发现 Reflection 经典边界：模型自己检查自己时容易过度宽容，持续给 9 分并通过。
+  - 已调整检查策略：`check` prompt 改成严格审稿老师；Python 加硬判断，只有 `pass=true`、`score >= 10` 且 `feedback == ""` 才允许直接通过，否则进入修正。
+  - 关键理解：Reflection 不能只相信模型自评，模型可以给检查意见，但最终是否放行应由 Python 规则兜底。
 
 ## 下次教学入口
 
-第 8 课：Reflection 自我修正。
+第 9 课：记忆系统。
 
 建议开场：
 
-- 本课目标：让 Agent 回答后检查自己，并在不合格时修正。
-- 为什么学：模型第一次回答不一定可靠，Reflection 能让 Agent 多一层自检和重试。
-- 学完能做什么：写一个回答后自检，不合格就重答的 Agent。
+- 本课目标：让 Agent 记住用户信息和过去发生的事。
+- 为什么学：没有记忆的 Agent 每次都像第一次见用户；有记忆后，Agent 才能延续上下文和个性化服务。
+- 学完能做什么：手写一个 JSON 记忆库，支持 add / search / list。
