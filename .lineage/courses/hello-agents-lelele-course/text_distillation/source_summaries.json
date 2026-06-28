@@ -1,0 +1,311 @@
+[
+  {
+    "source_id": "752a28d542c75e6c41b2209704b37816",
+    "source_path": "README.md",
+    "source_ref": "README.md",
+    "chunk_count": 52,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "070b0e72eeafd039a6905f23b3560973",
+    "source_path": "COURSE_OUTLINE.md",
+    "source_ref": "COURSE_OUTLINE.md",
+    "chunk_count": 55,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "49da04c15553e4e6fa9a0b119c867c16",
+    "source_path": "TEACHING_PROGRESS.md",
+    "source_ref": "TEACHING_PROGRESS.md",
+    "chunk_count": 29,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "e715b9c519445897cb4065282c0ea440",
+    "source_path": "README.md",
+    "source_ref": "README.md",
+    "chunk_count": 49,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "2a61d55a52e9d6091fa8ce0c0333effd",
+    "source_path": "前言.md",
+    "source_ref": "前言.md",
+    "chunk_count": 21,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "d0fc60ce95b7bfc926aae65c3e1c4528",
+    "source_path": "Chapter1-Introduction-to-Agents.md",
+    "source_ref": "Chapter1-Introduction-to-Agents.md",
+    "chunk_count": 213,
+    "card_count": 13,
+    "card_types": {
+      "task": 13
+    }
+  },
+  {
+    "source_id": "6d6e5a1858508610eee3833ce9d5db07",
+    "source_path": "第一章 初识智能体.md",
+    "source_ref": "第一章 初识智能体.md",
+    "chunk_count": 213,
+    "card_count": 10,
+    "card_types": {
+      "task": 10
+    }
+  },
+  {
+    "source_id": "8ce62dd19dcee240ead35084c493a0fe",
+    "source_path": "Chapter2-History-of-Agents.md",
+    "source_ref": "Chapter2-History-of-Agents.md",
+    "chunk_count": 178,
+    "card_count": 3,
+    "card_types": {
+      "transfer": 1,
+      "task": 2
+    }
+  },
+  {
+    "source_id": "98d02cbeec37fbfe955b31e77c120bb7",
+    "source_path": "第二章 智能体发展史.md",
+    "source_ref": "第二章 智能体发展史.md",
+    "chunk_count": 178,
+    "card_count": 0,
+    "card_types": {}
+  },
+  {
+    "source_id": "6c6326ad1cadd9b28440008fb4d76ebb",
+    "source_path": "Chapter3-Fundamentals-of-Large-Language-Models.md",
+    "source_ref": "Chapter3-Fundamentals-of-Large-Language-Models.md",
+    "chunk_count": 324,
+    "card_count": 4,
+    "card_types": {
+      "case": 4
+    }
+  },
+  {
+    "source_id": "ccf1f5f7b85b8cf6d1a37a656a08c8c7",
+    "source_path": "第三章 大语言模型基础.md",
+    "source_ref": "第三章 大语言模型基础.md",
+    "chunk_count": 323,
+    "card_count": 3,
+    "card_types": {
+      "case": 3
+    }
+  },
+  {
+    "source_id": "90710da1ce19b631bc0ce3bf17fae6f2",
+    "source_path": "Chapter4-Building-Classic-Agent-Paradigms.md",
+    "source_ref": "Chapter4-Building-Classic-Agent-Paradigms.md",
+    "chunk_count": 351,
+    "card_count": 17,
+    "card_types": {
+      "case": 1,
+      "task": 13,
+      "open_question": 3
+    }
+  },
+  {
+    "source_id": "43c79a18e50d97cebb5d96e888568541",
+    "source_path": "第四章 智能体经典范式构建.md",
+    "source_ref": "第四章 智能体经典范式构建.md",
+    "chunk_count": 351,
+    "card_count": 6,
+    "card_types": {
+      "task": 5,
+      "open_question": 1
+    }
+  },
+  {
+    "source_id": "07c8c8b4838ffbfc55c7c3bf8252d41b",
+    "source_path": "Chapter7-Building-Your-Agent-Framework.md",
+    "source_ref": "Chapter7-Building-Your-Agent-Framework.md",
+    "chunk_count": 527,
+    "card_count": 7,
+    "card_types": {
+      "task": 3,
+      "open_question": 3,
+      "method": 1
+    }
+  },
+  {
+    "source_id": "5beabaffeb15d292bbceedfb96d27810",
+    "source_path": "第七章 构建你的Agent框架.md",
+    "source_ref": "第七章 构建你的Agent框架.md",
+    "chunk_count": 536,
+    "card_count": 6,
+    "card_types": {
+      "method": 4,
+      "task": 1,
+      "open_question": 1
+    }
+  },
+  {
+    "source_id": "a4a4d4b5f8be7e6e141f90ced7dd44e8",
+    "source_path": "Chapter8-Memory-and-Retrieval.md",
+    "source_ref": "Chapter8-Memory-and-Retrieval.md",
+    "chunk_count": 456,
+    "card_count": 18,
+    "card_types": {
+      "boundary": 10,
+      "transfer": 1,
+      "method": 5,
+      "open_question": 1,
+      "concept": 1
+    }
+  },
+  {
+    "source_id": "02a42f0377fa51f60418df1234664e84",
+    "source_path": "第八章 记忆与检索.md",
+    "source_ref": "第八章 记忆与检索.md",
+    "chunk_count": 448,
+    "card_count": 4,
+    "card_types": {
+      "transfer": 1,
+      "rubric": 1,
+      "open_question": 1,
+      "case": 1
+    }
+  },
+  {
+    "source_id": "6e9dc9ad7dcd2b958ac22edd2dacdcbc",
+    "source_path": "Chapter9-Context-Engineering.md",
+    "source_ref": "Chapter9-Context-Engineering.md",
+    "chunk_count": 656,
+    "card_count": 42,
+    "card_types": {
+      "concept": 32,
+      "method": 1,
+      "boundary": 8,
+      "task": 1
+    }
+  },
+  {
+    "source_id": "771f5b06fb241e8e92ad7181faeb9287",
+    "source_path": "第九章 上下文工程.md",
+    "source_ref": "第九章 上下文工程.md",
+    "chunk_count": 656,
+    "card_count": 27,
+    "card_types": {
+      "concept": 16,
+      "method": 1,
+      "boundary": 6,
+      "open_question": 3,
+      "case": 1
+    }
+  },
+  {
+    "source_id": "f1464de93b39bed08ff3e8e480ef72f0",
+    "source_path": "Chapter10-Agent-Communication-Protocols.md",
+    "source_ref": "Chapter10-Agent-Communication-Protocols.md",
+    "chunk_count": 582,
+    "card_count": 10,
+    "card_types": {
+      "method": 7,
+      "open_question": 1,
+      "task": 2
+    }
+  },
+  {
+    "source_id": "531cc6df58776f211b5ee378fd9f3a0d",
+    "source_path": "第十章 智能体通信协议.md",
+    "source_ref": "第十章 智能体通信协议.md",
+    "chunk_count": 582,
+    "card_count": 1,
+    "card_types": {
+      "boundary": 1
+    }
+  },
+  {
+    "source_id": "7b926228fdd0cacdb610e3a3206d3781",
+    "source_path": "Chapter12-Agent-Performance-Evaluation.md",
+    "source_ref": "Chapter12-Agent-Performance-Evaluation.md",
+    "chunk_count": 736,
+    "card_count": 9,
+    "card_types": {
+      "method": 9
+    }
+  },
+  {
+    "source_id": "79463cfa9c91c048698194e5aca24c12",
+    "source_path": "第十二章 智能体性能评估.md",
+    "source_ref": "第十二章 智能体性能评估.md",
+    "chunk_count": 714,
+    "card_count": 13,
+    "card_types": {
+      "rubric": 4,
+      "method": 6,
+      "open_question": 3
+    }
+  },
+  {
+    "source_id": "81cebfde8400cdbec99eba9d6ae971d5",
+    "source_path": "Chapter13-Intelligent-Travel-Assistant.md",
+    "source_ref": "Chapter13-Intelligent-Travel-Assistant.md",
+    "chunk_count": 385,
+    "card_count": 1,
+    "card_types": {
+      "case": 1
+    }
+  },
+  {
+    "source_id": "c80f19370abfa4e08c908d445f04cdd5",
+    "source_path": "第十三章 智能旅行助手.md",
+    "source_ref": "第十三章 智能旅行助手.md",
+    "chunk_count": 383,
+    "card_count": 11,
+    "card_types": {
+      "boundary": 9,
+      "case": 1,
+      "template": 1
+    }
+  },
+  {
+    "source_id": "b6b0c08cac29be7d42c96733492325df",
+    "source_path": "Chapter14-Automated-Deep-Research-Agent.md",
+    "source_ref": "Chapter14-Automated-Deep-Research-Agent.md",
+    "chunk_count": 529,
+    "card_count": 36,
+    "card_types": {
+      "task": 24,
+      "case": 8,
+      "method": 2,
+      "boundary": 2
+    }
+  },
+  {
+    "source_id": "a1baafec32763e1651a19ac0d4f58ec9",
+    "source_path": "第十四章 自动化深度研究智能体.md",
+    "source_ref": "第十四章 自动化深度研究智能体.md",
+    "chunk_count": 529,
+    "card_count": 9,
+    "card_types": {
+      "task": 8,
+      "case": 1
+    }
+  },
+  {
+    "source_id": "4cba19456f2ddf1434602a6fb2f86282",
+    "source_path": "Chapter16-Graduation-Project.md",
+    "source_ref": "Chapter16-Graduation-Project.md",
+    "chunk_count": 300,
+    "card_count": 3,
+    "card_types": {
+      "case": 1,
+      "method": 2
+    }
+  },
+  {
+    "source_id": "bf1e890d8e223ce2cbb5969e2fed892c",
+    "source_path": "第十六章 毕业设计.md",
+    "source_ref": "第十六章 毕业设计.md",
+    "chunk_count": 300,
+    "card_count": 0,
+    "card_types": {}
+  }
+]

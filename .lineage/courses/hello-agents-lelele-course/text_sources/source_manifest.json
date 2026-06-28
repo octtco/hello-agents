@@ -1,0 +1,271 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-06-27T21:18:31",
+  "source_count": 29,
+  "chunk_count": 10656,
+  "max_chars": 6000,
+  "overlap_chars": 500,
+  "sources": [
+    {
+      "source_id": "752a28d542c75e6c41b2209704b37816",
+      "source_path": "README.md",
+      "source_ref": "README.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/README.md",
+      "suffix": ".md",
+      "chars": 13150,
+      "content_sha256": "cfb70dd1c1d46ebfbcc19ed4ca34298d1b1b908815846b41b15064053cc3d939"
+    },
+    {
+      "source_id": "070b0e72eeafd039a6905f23b3560973",
+      "source_path": "COURSE_OUTLINE.md",
+      "source_ref": "COURSE_OUTLINE.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/COURSE_OUTLINE.md",
+      "suffix": ".md",
+      "chars": 2674,
+      "content_sha256": "d8355a26c4650250bf7083f34212408d8abde557081b02f5c307253db9a98698"
+    },
+    {
+      "source_id": "49da04c15553e4e6fa9a0b119c867c16",
+      "source_path": "TEACHING_PROGRESS.md",
+      "source_ref": "TEACHING_PROGRESS.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/TEACHING_PROGRESS.md",
+      "suffix": ".md",
+      "chars": 10941,
+      "content_sha256": "cd3537c6cc12fc5e930d8696f84cec6325cc8191330c9f86d6c442a45f5785f7"
+    },
+    {
+      "source_id": "e715b9c519445897cb4065282c0ea440",
+      "source_path": "README.md",
+      "source_ref": "README.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/README.md",
+      "suffix": ".md",
+      "chars": 12548,
+      "content_sha256": "27da8138c76f6b1a0cf9d1e06489216ea198d2ee7fe482aab446fc0bde00c319"
+    },
+    {
+      "source_id": "2a61d55a52e9d6091fa8ce0c0333effd",
+      "source_path": "前言.md",
+      "source_ref": "前言.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/前言.md",
+      "suffix": ".md",
+      "chars": 1564,
+      "content_sha256": "276eafcd8ae5732dc61add104724789b3802073efb9d2ce5b44014b539250856"
+    },
+    {
+      "source_id": "d0fc60ce95b7bfc926aae65c3e1c4528",
+      "source_path": "Chapter1-Introduction-to-Agents.md",
+      "source_ref": "Chapter1-Introduction-to-Agents.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter1/Chapter1-Introduction-to-Agents.md",
+      "suffix": ".md",
+      "chars": 60775,
+      "content_sha256": "8d79d6ebd3c580978bb56487a6967278ff479a331b1a6aff51316ff75f9321ba"
+    },
+    {
+      "source_id": "6d6e5a1858508610eee3833ce9d5db07",
+      "source_path": "第一章 初识智能体.md",
+      "source_ref": "第一章 初识智能体.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter1/第一章 初识智能体.md",
+      "suffix": ".md",
+      "chars": 26930,
+      "content_sha256": "90e806130eb65e6b046d5d71f2c9a6bd434ec1b02d577c698d097fb38bffa05b"
+    },
+    {
+      "source_id": "8ce62dd19dcee240ead35084c493a0fe",
+      "source_path": "Chapter2-History-of-Agents.md",
+      "source_ref": "Chapter2-History-of-Agents.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter2/Chapter2-History-of-Agents.md",
+      "suffix": ".md",
+      "chars": 61524,
+      "content_sha256": "b71fed5af186f88cd7e18d3e90fbcbbef4bd822f934b268bc95458b5980d16f3"
+    },
+    {
+      "source_id": "98d02cbeec37fbfe955b31e77c120bb7",
+      "source_path": "第二章 智能体发展史.md",
+      "source_ref": "第二章 智能体发展史.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter2/第二章 智能体发展史.md",
+      "suffix": ".md",
+      "chars": 27708,
+      "content_sha256": "20582b9c843c8a5c7968eb8f55abe0fca0a3ea22c61a30aba6f9e48a9b31c625"
+    },
+    {
+      "source_id": "6c6326ad1cadd9b28440008fb4d76ebb",
+      "source_path": "Chapter3-Fundamentals-of-Large-Language-Models.md",
+      "source_ref": "Chapter3-Fundamentals-of-Large-Language-Models.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter3/Chapter3-Fundamentals-of-Large-Language-Models.md",
+      "suffix": ".md",
+      "chars": 86434,
+      "content_sha256": "fbdf93b97f970b85157f77d2fde47930b8db17f932ddd0cf40c822bb4ae8476f"
+    },
+    {
+      "source_id": "ccf1f5f7b85b8cf6d1a37a656a08c8c7",
+      "source_path": "第三章 大语言模型基础.md",
+      "source_ref": "第三章 大语言模型基础.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter3/第三章 大语言模型基础.md",
+      "suffix": ".md",
+      "chars": 42976,
+      "content_sha256": "f9951631658aa0b7102fe457b273220dd949c56f24faa7ab35d8d6f378c6b1e1"
+    },
+    {
+      "source_id": "90710da1ce19b631bc0ce3bf17fae6f2",
+      "source_path": "Chapter4-Building-Classic-Agent-Paradigms.md",
+      "source_ref": "Chapter4-Building-Classic-Agent-Paradigms.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter4/Chapter4-Building-Classic-Agent-Paradigms.md",
+      "suffix": ".md",
+      "chars": 80787,
+      "content_sha256": "7c06d90190a49ee78bf2c8914b7b517a3bcde5e609d9fb5309215a5a169140b3"
+    },
+    {
+      "source_id": "43c79a18e50d97cebb5d96e888568541",
+      "source_path": "第四章 智能体经典范式构建.md",
+      "source_ref": "第四章 智能体经典范式构建.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter4/第四章 智能体经典范式构建.md",
+      "suffix": ".md",
+      "chars": 42102,
+      "content_sha256": "3f02e84fcf75c76caef3eaca5b91765251d1d8afbbf0f6dc750abcd25eff1ef1"
+    },
+    {
+      "source_id": "07c8c8b4838ffbfc55c7c3bf8252d41b",
+      "source_path": "Chapter7-Building-Your-Agent-Framework.md",
+      "source_ref": "Chapter7-Building-Your-Agent-Framework.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter7/Chapter7-Building-Your-Agent-Framework.md",
+      "suffix": ".md",
+      "chars": 101933,
+      "content_sha256": "91f0d52da574e685b1b99f96004647789bd93cf51a87dc5ab38cc0307a755d30"
+    },
+    {
+      "source_id": "5beabaffeb15d292bbceedfb96d27810",
+      "source_path": "第七章 构建你的Agent框架.md",
+      "source_ref": "第七章 构建你的Agent框架.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter7/第七章 构建你的Agent框架.md",
+      "suffix": ".md",
+      "chars": 63266,
+      "content_sha256": "c8d831e2bafaa947ebad85f945a0f40da9b3bfecdfe09519be932aa461426725"
+    },
+    {
+      "source_id": "a4a4d4b5f8be7e6e141f90ced7dd44e8",
+      "source_path": "Chapter8-Memory-and-Retrieval.md",
+      "source_ref": "Chapter8-Memory-and-Retrieval.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter8/Chapter8-Memory-and-Retrieval.md",
+      "suffix": ".md",
+      "chars": 104549,
+      "content_sha256": "1b167c99a4d4fc6c0fac28e4a52a21c7a2c7042a7180b945a02aaf6edb33fcb4"
+    },
+    {
+      "source_id": "02a42f0377fa51f60418df1234664e84",
+      "source_path": "第八章 记忆与检索.md",
+      "source_ref": "第八章 记忆与检索.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter8/第八章 记忆与检索.md",
+      "suffix": ".md",
+      "chars": 64387,
+      "content_sha256": "0d2542124a288c2151592db153091f341849e24c4a7763e96ba54f033c60dd1e"
+    },
+    {
+      "source_id": "6e9dc9ad7dcd2b958ac22edd2dacdcbc",
+      "source_path": "Chapter9-Context-Engineering.md",
+      "source_ref": "Chapter9-Context-Engineering.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter9/Chapter9-Context-Engineering.md",
+      "suffix": ".md",
+      "chars": 114304,
+      "content_sha256": "bca0699d80e4ca8051f44f231008135168409e412b1823ead48cf3a59ef6220c"
+    },
+    {
+      "source_id": "771f5b06fb241e8e92ad7181faeb9287",
+      "source_path": "第九章 上下文工程.md",
+      "source_ref": "第九章 上下文工程.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter9/第九章 上下文工程.md",
+      "suffix": ".md",
+      "chars": 74238,
+      "content_sha256": "e19d020341763b796add06562bf17779efa68c79fb6cb30d8281061a3dab1b06"
+    },
+    {
+      "source_id": "f1464de93b39bed08ff3e8e480ef72f0",
+      "source_path": "Chapter10-Agent-Communication-Protocols.md",
+      "source_ref": "Chapter10-Agent-Communication-Protocols.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter10/Chapter10-Agent-Communication-Protocols.md",
+      "suffix": ".md",
+      "chars": 97769,
+      "content_sha256": "649365053308df5f37cc436a774ff4f53ae28885b2c93be0a845cabc1bcfd31c"
+    },
+    {
+      "source_id": "531cc6df58776f211b5ee378fd9f3a0d",
+      "source_path": "第十章 智能体通信协议.md",
+      "source_ref": "第十章 智能体通信协议.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter10/第十章 智能体通信协议.md",
+      "suffix": ".md",
+      "chars": 64153,
+      "content_sha256": "b37443724d6fe873cbb8807e15b63dfcc821625a36b2aed00b35ebe7ed1b025d"
+    },
+    {
+      "source_id": "7b926228fdd0cacdb610e3a3206d3781",
+      "source_path": "Chapter12-Agent-Performance-Evaluation.md",
+      "source_ref": "Chapter12-Agent-Performance-Evaluation.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter12/Chapter12-Agent-Performance-Evaluation.md",
+      "suffix": ".md",
+      "chars": 119206,
+      "content_sha256": "dfe8d74f62dec90659c7a2348d4c0fe6797f6b7326e51723df269735f0f1b5de"
+    },
+    {
+      "source_id": "79463cfa9c91c048698194e5aca24c12",
+      "source_path": "第十二章 智能体性能评估.md",
+      "source_ref": "第十二章 智能体性能评估.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter12/第十二章 智能体性能评估.md",
+      "suffix": ".md",
+      "chars": 77933,
+      "content_sha256": "9a3e139c864e038e5e3ded0d9de8049ba18f0497ead3e70da445eb8c1fa79617"
+    },
+    {
+      "source_id": "81cebfde8400cdbec99eba9d6ae971d5",
+      "source_path": "Chapter13-Intelligent-Travel-Assistant.md",
+      "source_ref": "Chapter13-Intelligent-Travel-Assistant.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter13/Chapter13-Intelligent-Travel-Assistant.md",
+      "suffix": ".md",
+      "chars": 78820,
+      "content_sha256": "21912dc166c9581c859414daab4208cebbe502aa58ea004115635bed8209756e"
+    },
+    {
+      "source_id": "c80f19370abfa4e08c908d445f04cdd5",
+      "source_path": "第十三章 智能旅行助手.md",
+      "source_ref": "第十三章 智能旅行助手.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter13/第十三章 智能旅行助手.md",
+      "suffix": ".md",
+      "chars": 45919,
+      "content_sha256": "bd5d7b365faabc174616adc2635b9985182f9df168f460ff924c280e95361bc3"
+    },
+    {
+      "source_id": "b6b0c08cac29be7d42c96733492325df",
+      "source_path": "Chapter14-Automated-Deep-Research-Agent.md",
+      "source_ref": "Chapter14-Automated-Deep-Research-Agent.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter14/Chapter14-Automated-Deep-Research-Agent.md",
+      "suffix": ".md",
+      "chars": 76349,
+      "content_sha256": "6ffd3c98740afdc5648b44cb824d0800f920eb535ffaecb87efaa1ce385be80a"
+    },
+    {
+      "source_id": "a1baafec32763e1651a19ac0d4f58ec9",
+      "source_path": "第十四章 自动化深度研究智能体.md",
+      "source_ref": "第十四章 自动化深度研究智能体.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter14/第十四章 自动化深度研究智能体.md",
+      "suffix": ".md",
+      "chars": 52099,
+      "content_sha256": "a6ceef0555715f3870f097fcf812496862a28d4a1ad1ce6cbfa05c2989692bbf"
+    },
+    {
+      "source_id": "4cba19456f2ddf1434602a6fb2f86282",
+      "source_path": "Chapter16-Graduation-Project.md",
+      "source_ref": "Chapter16-Graduation-Project.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter16/Chapter16-Graduation-Project.md",
+      "suffix": ".md",
+      "chars": 32200,
+      "content_sha256": "cb5e3ad936c54508f421cb4fa8abb189c3fcdb303ea3b903679735952f112b21"
+    },
+    {
+      "source_id": "bf1e890d8e223ce2cbb5969e2fed892c",
+      "source_path": "第十六章 毕业设计.md",
+      "source_ref": "第十六章 毕业设计.md",
+      "absolute_path": "/Users/lelele/Documents/Learn/Agent/hello-agents/docs/chapter16/第十六章 毕业设计.md",
+      "suffix": ".md",
+      "chars": 18825,
+      "content_sha256": "67ab4ffa675c82e84f74e94ecdb49c00e2fdce7ce20cd64962cd0cc5070676d7"
+    }
+  ]
+}

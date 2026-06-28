@@ -6,9 +6,10 @@
 
 ## 当前课程进度
 
-- 当前阶段：第 9 课准备开始，进入记忆系统。
+- 当前阶段：第 9 课进行中，已跑通最小记忆问答链路。
 - 当前课程：第 9 课，记忆系统。
-- 下一步：讲解 Agent 的工作记忆和长期记忆，并手写 JSON 记忆库，支持 add / search / list。
+- 已完成本课核心链路：JSON 记忆库 `load / save / add / list / search`，关键词提取 `extract_keywords()`，相关记忆搜索 `search_related_memories()`，记忆格式化 `format_memories()`，以及根据记忆回答的 `answer_with_memory()`。
+- 下一步：写 `decide_memory_action(user_message)`，让 Agent 判断用户消息应该走新增记忆 `add`、查询记忆 `search`，还是普通聊天 `chat`。
 
 ## 已完成课程
 
@@ -51,11 +52,31 @@
   - 已澄清手搓版和官方版的流程差异：手搓版当前是“模型决策 -> Python 执行 -> Python 直接输出结果”；官方版是“两轮模型调用：模型提出 `function_call` -> Python 执行 -> 回传 `function_call_output` -> 模型生成最终回答”。
   - 已讲解工具调用安全边界：prompt 只是软提醒，tools/schema 是格式约束，真正的硬边界必须在 Python 执行层检查工具名、参数、权限和是否需要用户确认。
 
+## 进行中课程记录
+
+- 第 9 课：记忆系统。
+  - 已创建并推进 `lessons/lesson_09/memory_agent.py` 和 `lessons/lesson_09/memory.json`。
+  - lelele 已完成 JSON 文件记忆库：`load_memories()`、`save_memories()`、`add_memory()`、`list_memories()`、`search_memories()`。
+  - 已讲解 `Path(__file__).parent / "memory.json"`：让记忆文件跟当前 Python 文件放在一起。
+  - 已讲解 `json.load()` 与 `json.dump(..., ensure_ascii=False, indent=2)`：读写中文 JSON 记忆。
+  - 已完成关键词提取 `extract_keywords(user_message)`：使用 Responses API + Structured Outputs 输出 `keywords / reply / thought`。
+  - 已修正 JSON Schema：`keywords` 应为 `array`，并通过 `items: {"type": "string"}` 指明列表里是字符串。
+  - 已修正 messages 输入形状：单条用户消息也应放进列表，例如 `[{"role": "user", "content": prompt}]`。
+  - 已安装环境依赖：`lessons/.venv` 原本缺 `pip` 和 `socksio`，已通过 `ensurepip` 补 `pip`，并安装 `socksio`，解决 OpenAI SDK / httpx 在系统 SOCKS 代理环境下的启动报错。
+  - 已完成相关记忆搜索 `search_related_memories(user_message)`：先提取关键词，再逐个调用 `search_memories(keyword)`，并用 `extend()` 合并结果。
+  - 已通过调试理解 `append()` 与 `extend()` 在这里的区别：`append()` 会得到 `[[], [], ...]` 这种嵌套列表，`extend()` 会把搜索结果摊开放进总列表。
+  - 已调整 `memory.json` 内容为更容易命中的学习进度记录：`lelele 的学习进度：正在学习 Agent 第 9 课记忆系统`。
+  - 已完成 `format_memories(memories)`：把记忆列表转换成给 LLM 阅读的文本，并处理空记忆提示。
+  - 已完成 `answer_with_memory(user_message)`：先找相关记忆，再把记忆和用户问题交给 LLM，最终能回答“你现在学到 Agent 第 9 课：记忆系统”。
+  - 当前设计小提醒：`answer_with_memory()` 里把记忆作为 `assistant` 角色传入，当前能跑；后续可以改成 `system` 角色，或把记忆和用户问题合并成一个更清晰的 user prompt。
+  - 下一步：写规则版 `decide_memory_action(user_message)`，先不用 LLM 判断，规则为包含“记住”走 `add`，包含“我现在 / 学到哪里 / 进度”走 `search`，否则走 `chat`。
+
 ## 当前卡点
 
 - 第 1 课反馈：如果面向完全零基础学习者，不能直接给完整代码。需要先解释每个语法积木，例如变量、`print()`、`input()`、`def`、参数、`if`、`while True`、`break`、`return`，并说明运行后能看到什么效果。
 - 第 5 课反馈：课程为了推进工具调用主线，临时拓展过多，导致多个底层知识没有提前讲清楚。lelele 虽然能跑通代码，但对 `append`、`extend`、`+=`、OpenAI SDK 的 `response` / `output` / `output_text`、JSON Schema 的通用性、Python `dict` 与 JSON Schema `object` 的关系仍有黑箱感。
 - 教学方式卡点：连续两三节课都以“先初步接触”为理由略过底层结构，导致后续概念越堆越多。需要讨论一套机制，避免继续出现“能跑但不真懂”的情况。
+- 第 9 课环境卡点：换设备后如果不传 `lessons/.venv`，需要重新安装依赖；尤其是当前网络代理环境可能需要 `socksio`，否则 OpenAI SDK 底层 `httpx` 会报 `Using SOCKS proxy, but the 'socksio' package is not installed`。
 
 ## 高频疑惑点
 
@@ -180,6 +201,8 @@
 
 建议开场：
 
-- 本课目标：让 Agent 记住用户信息和过去发生的事。
-- 为什么学：没有记忆的 Agent 每次都像第一次见用户；有记忆后，Agent 才能延续上下文和个性化服务。
-- 学完能做什么：手写一个 JSON 记忆库，支持 add / search / list。
+- 当前已完成：JSON 记忆库、关键词提取、相关记忆搜索、记忆格式化、根据记忆回答。
+- 下一步目标：写 `decide_memory_action(user_message)`。
+- 为什么学：Agent 不能每句话都查记忆，也不能每句话都保存；它需要一个路由器判断下一步走新增记忆、查询记忆，还是普通聊天。
+- 学完能做什么：让 Agent 对用户输入做最小决策，输出 `add / search / chat`。
+- 建议先写规则版，不用 LLM：包含“记住”返回 `add`；包含“我现在 / 学到哪里 / 进度”返回 `search`；否则返回 `chat`。
